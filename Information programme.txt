@@ -1,0 +1,7 @@
+Créez un repertoire nommé 'data' où vous introduisez le fichier 'bibiliothèque.db'.
+
+Ensuite votre repertoire doit contenir les trois fichiers : 
+'index.py','result.py','server.py' et un repertoire 'data' avec le fichier 'bibliothèque.db'.
+
+Pour lancer ce programme veuillez lancer le fichier nommé "server.py"
+puis sur une page un internet entrez le lien suivant : http://localhost:8888/index.py et cela vous donnera la page correspondante.
