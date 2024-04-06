@@ -1,2 +1,2 @@
 # Projets
-Tous mes projets Informatiques
+Créez un dossier Combat_poo dans lequel vous introduisez tous les fichiers
