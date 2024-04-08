@@ -19,7 +19,7 @@ class Personnage:
         return self.vie
 
     def jab(self):
-        self.vie -= 75
+        self.vie -= 10
 
     def uppercut(self):
         self.vie -= 30
