@@ -164,7 +164,7 @@ def combat():
         fen.title(perso1.nom +' à gagné')
         play_sound(os.path.join(combat_poo_dir, "final_punch.mp3"))
         app.afficher(os.path.join(combat_poo_dir, "p1 KO p2.png"))
-        fen.after(4000, fen.update_idletasks())
+        fen.after(4000, fen.update_idletasks)
         play_sound(os.path.join(combat_poo_dir, "Bell.mp3"))
         app.afficher(os.path.join(combat_poo_dir, "p1_win.png"))
 
@@ -174,7 +174,7 @@ def combat():
         fen.title(perso2.nom +' à gagné')
         play_sound(os.path.join(combat_poo_dir, "final_punch.mp3"))
         app.afficher(os.path.join(combat_poo_dir, "p2 KO p1.png"))
-        fen.after(4000, fen.update_idletasks())
+        fen.after(4000, fen.update_idletasks)
         play_sound(os.path.join(combat_poo_dir, "Bell.mp3"))
         app.afficher(os.path.join(combat_poo_dir, "p2_win.png"))
     fen.mainloop()
