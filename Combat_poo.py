@@ -193,4 +193,4 @@ app.afficher(os.path.join(combat_poo_dir,"Black.png"))
 fen.update_idletasks()
 app.afficher(os.path.join(combat_poo_dir,"Start.png"))
 
-fen.after(6000,combat())
+fen.after(6000,combat)
