@@ -27,7 +27,7 @@ class Personnage:
     def hook(self):
         self.vie -= 15
 
-class CombatApplication:
+class Combat:
     def __init__(self, fenetre):
         self.fenetre = fenetre
         self.can = Canvas(self.fenetre, width=1000, height=680, bg='white')
@@ -188,9 +188,10 @@ perso1 = Personnage(nom_perso1, 75)
 perso2 = Personnage(nom_perso2, 75)
 fen = Tk()
 fen.title('Combat_poo')
-app = CombatApplication(fen)
+app = Combat(fen)
 app.afficher(os.path.join(combat_poo_dir,"Black.png"))
 fen.update_idletasks()
 app.afficher(os.path.join(combat_poo_dir,"Start.png"))
 
 fen.after(6000,combat)
+fen.mainloop()
