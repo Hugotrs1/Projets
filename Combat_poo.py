@@ -27,7 +27,7 @@ class Personnage:
     def hook(self):
         self.vie -= 15
 
-class Combat:
+class CombatApplication:
     def __init__(self, fenetre):
         self.fenetre = fenetre
         self.can = Canvas(self.fenetre, width=1000, height=680, bg='white')
@@ -59,7 +59,7 @@ def recap(jp1, jesp1, up1, upes1, h1, hes1, jp2, jesp2, up2, upes2, h2, hes2):
     print('------------------------------')
 
 def combat():
-    
+
     jp1, jesp1, up1, upes1, h1, hes1, jp2, jesp2, up2, upes2, h2, hes2 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     while perso1.pvrestant() > 0 and perso2.pvrestant() > 0:
         atckfrst = rd.randint(1, 2)
@@ -150,13 +150,13 @@ def combat():
                     play_sound(os.path.join(combat_poo_dir, "esquive.mp3"))
                     app.afficher(os.path.join(combat_poo_dir, "P1_esh_p2.png"))
 
-        time.sleep(1)
-        fen.update_idletasks()
+
+        fen.after(2000,fen.update_idletasks)
         print('-------------------------------')
         print('PV de', perso1.nom, ':', perso1.pvrestant())
         print('PV de', perso2.nom, ':', perso2.pvrestant())
         print('-------------------------------')
-        time.sleep(2)
+
 
     if perso2.pvrestant() <= 0:
         print(perso1.nom, 'remporte le combat')
@@ -187,11 +187,10 @@ nom_perso2 = input('Quel est le nom de l\'adversaire ? ')
 perso1 = Personnage(nom_perso1, 75)
 perso2 = Personnage(nom_perso2, 75)
 fen = Tk()
-fen.title('Combat_poo')
-app = Combat(fen)
-app.afficher(os.path.join(combat_poo_dir,"Black.png"))
-fen.update_idletasks()
+fen.title('Combat Start')
+app = CombatApplication(fen)
 app.afficher(os.path.join(combat_poo_dir,"Start.png"))
-
 fen.after(6000,combat)
+fen.update_idletasks()
+
 fen.mainloop()
