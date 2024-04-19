@@ -4,7 +4,16 @@ from PIL import Image, ImageTk
 import pygame
 import os
 import time
-
+"""
+Ce programme est une simulation d'un combat entre deux combattants, il y a donc 2 joueurs:
+    le premier est l'utilisateur derrière la machine qui peut choisir les coups à envoyer
+    puis l'ordinateur qui choisi au hasard les coups à envoyer
+Chacun des coups à une probabilité de toucher ou non
+Sachant que l'uppercut à peu de chance de toucher par rapport à un simple jab
+De plus une interface graphique est disponible qui s'actualise au fur et à mesure du combat
+Enfin lorsque l'un des deux personnages n'a plus de point de vie un vainqueur est désigné
+puis la fenêtre se ferme
+"""
 repertoire = os.path.dirname(os.path.abspath(__file__)) #variable associé avec celle du dessous qui permet de cherche automatiquement un fichier dans un dossier
 
 affichage = os.path.join(repertoire)
